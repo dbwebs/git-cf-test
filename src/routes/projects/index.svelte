@@ -61,7 +61,7 @@
 		{
 			title: "'94 Honda Del Sol", //del sol
 			description: 'Standard Del Sol to burn rubber',
-			src: '/images/projects/auto/del-sol/del-sol-side.jpg',
+			src: '/images/projects/auto/del-sol/del-sol-side.JPG',
 			href: ''
 		}
 		
