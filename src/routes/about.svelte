@@ -1,50 +1,47 @@
 <script context="module">
-	import { browser, dev } from '$app/env';
+	const wt = '/images/projects/boats/wild-thing/wild-thing-superior.jpg';
+	const xiia = '/images/portrait/Xiia.png';
+	const miah = '/images/portrait/Miah.png';
+	const anna = '/images/portrait/Anna.png';
+	const zakayla = '/images/portrait/Zakayla.png';
+	const makailah = '/images/portrait/Makailah.png';
 
-	// we don't need any JS on this page, though we'll load
-	// it in dev so that we get hot module replacement...
-	export const hydrate = dev;
-
-	// ...but if the client-side router is already loaded
-	// (i.e. we came here from elsewhere in the app), use it
-	export const router = browser;
-
-	// since there's no dynamic data here, we can prerender
-	// it so that it gets served as a static asset in prod
-	export const prerender = true;
+	const famList = [
+		{ name: 'Stacy', title: 'Father and Coach', src: miah },
+		{ name: 'Roni', title: 'Mother and Teacher', src: zakayla },
+		{ name: 'Xion', title: 'Daughter and Athlete', src: xiia },
+		{ name: 'Zephaneah', title: 'Daughter and Athlete', src: anna },
+		{ name: 'Natasha', title: 'Daughter and Athlete', src: miah },
+		{ name: 'Makailah', title: 'Daughter and Athlete', src: makailah },
+		{ name: 'Neahmiah', title: 'Son and Athlete', src: miah },
+		{ name: 'Annastasiah', title: 'Daughter and Athlete', src: anna },
+		{ name: 'Zakayla', title: 'Daughter and Athlete', src: zakayla },
+		{ name: 'Xalia', title: 'Daughter and Athlete', src: makailah },
+		{ name: 'Zemikah', title: 'Daughter and Athlete', src: zakayla },
+		{ name: 'Xiia', title: 'Daughter and Athlete', src: xiia },
+		{ name: 'Mekah', title: 'Grandaughter and Athlete', src: makailah }
+	];
 </script>
 
 <svelte:head>
 	<title>About</title>
 </svelte:head>
 
-<div class="content">
-	<h1>About this app</h1>
+<section id="about" class="otherpage">
+	<div class="row">
+		{#each famList as member}
+			<div class="col-md-6 p-5">
+				<div class="card r mw-600 mx-auto">
+					<img class="card-img-top rounded" src={member.src} alt={member.name} />
+					<div class="card-img-overlay card-inverse">
+						<h4 class="text-stroke overlay-text mw-200 ta-center">
+							{member.name}
+						</h4>
 
-	<p>
-		This is a <a href="https://kit.svelte.dev">SvelteKit</a> app. You can make your own by typing the
-		following into your command line and following the prompts:
-	</p>
-
-	<!-- TODO lose the @next! -->
-	<pre>npm init svelte@next</pre>
-
-	<p>
-		The page you're looking at is purely static HTML, with no client-side interactivity needed.
-		Because of that, we don't need to load any JavaScript. Try viewing the page's source, or opening
-		the devtools network panel and reloading.
-	</p>
-
-	<p>
-		The <a href="/todos">TODOs</a> page illustrates SvelteKit's data loading and form handling. Try using
-		it with JavaScript disabled!
-	</p>
-</div>
-
-<style>
-	.content {
-		width: 100%;
-		max-width: var(--column-width);
-		margin: var(--column-margin-top) auto 0 auto;
-	}
-</style>
+						<p class="card-br mw-200 bg-primary p-1 overlay-text">{member.title}</p>
+					</div>
+				</div>
+			</div>
+		{/each}
+	</div>
+</section>
