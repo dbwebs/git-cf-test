@@ -1,5 +1,5 @@
 {
-  "name": "git-cf-test",
+  "name": "svelte-with-backend",
   "version": "0.0.1",
   "scripts": {
     "dev": "svelte-kit dev",
@@ -13,7 +13,6 @@
   },
   "devDependencies": {
     "@sveltejs/adapter-auto": "next",
-    "@sveltejs/adapter-node": "^1.0.0-next.68",
     "@sveltejs/kit": "next",
     "@types/cookie": "^0.4.1",
     "@typescript-eslint/eslint-plugin": "^5.10.1",
@@ -21,6 +20,8 @@
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-svelte3": "^3.2.1",
+    "graphql": "^16.3.0",
+    "graphql-request": "^4.0.0",
     "prettier": "^2.5.1",
     "prettier-plugin-svelte": "^2.5.0",
     "svelte": "^3.46.0",

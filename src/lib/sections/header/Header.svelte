@@ -18,7 +18,8 @@
 		{ label: 'Contacts', href: '/contacts' },
 		{ label: 'Articles', href: '/articles' },
 		{ label: 'Projects', href: '/projects' },
-		{ label: 'Jason Scott Lee', href: '/jason-scott-lee' }
+		{ label: 'Jason Scott Lee', href: '/jason-scott-lee' },
+		{ label: 'Posts', href: '/post' }
 	];
 
 	// Mobile menu click event handler
